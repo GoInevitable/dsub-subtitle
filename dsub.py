@@ -51,7 +51,7 @@ except Exception:
 
 VIDEO_EXTS = {".mp4", ".mkv", ".mov", ".avi", ".flv", ".ts", ".m4v", ".webm",
               ".wmv", ".mpg", ".mpeg", ".rmvb", ".m2ts", ".vob", ".3gp", ".f4v"}
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 SIDECAR_EXTS = (".srt", ".ass", ".ssa", ".vtt", ".sub")
 CONFIG_DIR = os.path.join(os.path.expanduser("~"), ".dsub")
 KEY_FILE = os.path.join(CONFIG_DIR, "key.dpapi")
