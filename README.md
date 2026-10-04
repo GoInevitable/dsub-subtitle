@@ -8,6 +8,8 @@
                                                                     视频.zh.hardsub.mp4（烧录）
 ```
 
+> 只想用？往下看就行。想知道**为什么这么写**（ffmpeg 命令怎么拼、缓存怎么设计、踩过哪些坑），看 **[TECHNICAL.md](TECHNICAL.md)**。
+
 ---
 
 ## 1. 环境要求
@@ -403,10 +405,11 @@ python dsub.py "视频.mkv" --burn --vcodec h264_nvenc --preset p4
 
 ```
 dsub/
-├─ dsub.py      主程序（单文件，仅标准库）
-├─ dsub.cmd     Windows 快捷启动，可直接把本目录加进 PATH
-├─ LICENSE      MIT
-└─ README.md    本文件
+├─ dsub.py       主程序（单文件，仅标准库）
+├─ dsub.cmd      Windows 快捷启动，可直接把本目录加进 PATH
+├─ README.md     本文件
+├─ TECHNICAL.md  技术文档（实现细节与设计取舍）
+└─ LICENSE       MIT
 ```
 
 配置与缓存（不在本目录）：
