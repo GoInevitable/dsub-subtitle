@@ -49,6 +49,7 @@ except Exception:
 
 VIDEO_EXTS = {".mp4", ".mkv", ".mov", ".avi", ".flv", ".ts", ".m4v", ".webm",
               ".wmv", ".mpg", ".mpeg", ".rmvb", ".m2ts", ".vob", ".3gp", ".f4v"}
+__version__ = "1.0.0"
 SIDECAR_EXTS = (".srt", ".ass", ".ssa", ".vtt", ".sub")
 CONFIG_DIR = os.path.join(os.path.expanduser("~"), ".dsub")
 KEY_FILE = os.path.join(CONFIG_DIR, "key.dpapi")
@@ -121,7 +122,7 @@ def setup_log(ns):
         prune_logs()
     log("")
     log("=" * 64)
-    log("dsub 启动  %s" % time.strftime("%Y-%m-%d %H:%M:%S"))
+    log("dsub %s 启动  %s" % (__version__, time.strftime("%Y-%m-%d %H:%M:%S")))
     log("命令行    %s" % redact(" ".join(sys.argv)))
     log("Python    %s / %s" % (sys.version.split()[0], sys.platform))
 
@@ -850,6 +851,7 @@ def build_parser():
     ap.add_argument("--crf", type=int, default=20, help="烧录画质，默认 20")
     ap.add_argument("--preset", default="medium", help="x264 preset，默认 medium")
     ap.add_argument("--self-test", action="store_true", help="运行内置自检后退出")
+    ap.add_argument("-V", "--version", action="version", version="dsub " + __version__)
     return ap
 
 
