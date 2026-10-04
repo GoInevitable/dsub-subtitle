@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+
+# 跑出来的成品别提交（视频/字幕体积大，通常也不是你的代码）
+*.mkv
+*.mp4
+*.mov
+*.avi
+*.flv
+*.ts
+*.m2ts
+*.webm
+*.srt
+*.ass
+*.ssa
+*.vtt
+*.log
