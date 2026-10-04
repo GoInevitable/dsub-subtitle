@@ -34,7 +34,7 @@ ffmpeg -version
 
 ### A. 直接下 exe（不用装 Python）
 
-到 [Releases](https://github.com/GGoIn/dsub-subtitle/releases) 下载 `dsub.exe`，放到任意目录（例如 `D:\Tools\`）就能用。
+到 [Releases](https://github.com/GoInevitable/dsub-subtitle/releases) 下载 `dsub.exe`，放到任意目录（例如 `D:\Tools\`）就能用。
 
 ```powershell
 D:\Tools\dsub.exe "D:\视频\某视频.mkv"
