@@ -41,9 +41,11 @@ import unicodedata
 import urllib.error
 import urllib.request
 
-try:  # 不强制 UTF-8：中文 Windows 的控制台本来就是 cp936，强改反而乱码
-    sys.stdout.reconfigure(errors="replace")
-    sys.stderr.reconfigure(errors="replace")
+try:
+    # 统一 UTF-8 输出：Windows 控制台本来就按 UTF-8 字节转宽字符，管道/重定向到文件也不会乱码。
+    # 打包成 exe 后冻结环境不会继承 UTF-8 模式，不显式设置就会打出乱码。
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 except Exception:
     pass
 

@@ -1,6 +1,11 @@
 __pycache__/
 *.py[cod]
 
+# PyInstaller 构建产物（exe 作为 release 附件分发，不进仓库）
+build/
+dist/
+*.spec
+
 # 跑出来的成品别提交（视频/字幕体积大，通常也不是你的代码）
 *.mkv
 *.mp4

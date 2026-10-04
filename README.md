@@ -30,6 +30,21 @@ ffmpeg -version
 
 ## 2. 安装
 
+两种装法，二选一：
+
+### A. 直接下 exe（不用装 Python）
+
+到 [Releases](https://github.com/GGoIn/dsub-subtitle/releases) 下载 `dsub.exe`，放到任意目录（例如 `D:\Tools\`）就能用。
+
+```powershell
+D:\Tools\dsub.exe "D:\视频\某视频.mkv"
+```
+
+**仍然需要 ffmpeg 在 PATH 里。** exe 没做代码签名，Windows SmartScreen 可能提示「未知发布者」，
+点「更多信息 → 仍要运行」即可；杀毒软件偶尔会误报 PyInstaller 打包的程序，介意就用 B 方案。
+
+### B. 用源码（需要 Python 3.8+）
+
 把整个 `dsub` 文件夹放到任意位置（例如 `D:\Tools\dsub`），**可选**把它加进 PATH，就能在任意目录直接敲 `dsub`：
 
 ```powershell
